@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Letters 💌</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffe6f0;
+      margin: 0;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      color: #d6336c;
+      margin-bottom: 30px;
+    }
+
+    #letter {
+      font-size: 24px;
+      margin-top: 30px;
+      color: #444;
+      min-height: 80px;
+    }
+
+    button {
+      background-color: #ff7f7f;
+      color: white;
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #ff4c4c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>💌 Love Letter Generator 💌</h1>
+    <button onclick="showLoveLetter()">Show Me a Love Letter</button>
+    <div id="letter"></div>
+  </div>
+
+  <script>
+    const loveLetters = [
+      "Every day with you is my favorite day!",
+      "You are my everything!",
+      "I love you more and more every single day!",
+      "No distance could ever hurt my love for you!",
+      "No matter how far apart we are, you’re always in my heart, in my thoughts, and in everything I do!",
+      "Your laughter is my favorite sound and your smile is my favorite view!",
+      "Being loved by you makes me the luckiest man alive!",
+      "You make ordinary days feel like adventures I never want to end!",
+      "You make me want to be a better person because you deserve the best!",
+      "Every part of me loves every part of you!",
+      "You are my best friend, my favorite person, and will always be my first choice!",
+      "I found my forever in you!"
+    ];
+
+    function showLoveLetter() {
+      const randomIndex = Math.floor(Math.random() * loveLetters.length);
+      document.getElementById("letter").textContent = loveLetters[randomIndex];
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bored? Here's an Idea! 💡</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5; /* Very soft pink background */
+      margin: 0;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      color: #ff69b4;
+      margin-bottom: 30px;
+    }
+
+    #output {
+      font-size: 24px;
+      margin-top: 30px;
+      color: #444;
+      min-height: 80px; /* Reserve space so page doesn't jump when idea appears */
+    }
+
+    .button {
+      background-color: #ffb6c1;
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #ff69b4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>💡 Bored? Here's an Idea! 💡</h1>
+
+    <button class="button" onclick="showFunIdea()">Give Me an Idea!</button>
+    <button class="button" onclick="showShoppingIdea()">Inspire My Shopping List!</button>
+
+    <div id="output"></div>
+  </div>
+
+  <script>
+    const funIdeas = [
+      "Play Dress To Impress!",
+      "Watch shark vidoes",
+      "Look up future apartment decor ideas",
+      "Start a 'places I want to visit' list! (If you want I can make a website for this)",
+      "Listen to some music!",
+      "Read 1 chapter of your book",
+      "Search Pinterest for more apartment inspo",
+      "Take a random buzzfeed quiz",
+      "Call me and annoy me!",
+      "Make a list of more possible dogs and dog names",
+      "Make a list of vaacation spots!",
+      "Write some poetry!",
+      "Draw something in your apartment"
+    ];
+
+    const shoppingIdeas = [
+      "Look for cozy throw blankets",
+      "Look for cute mugs for our future kitchen",
+      "Look for tiny plants or fake plants you want",
+      "Look for fancy room lights",
+      "Look for living room furniture",
+      "Look for summer clothes!",
+      "Look for wall posters!",
+      "Look for good storage ideas!",
+      "Look for cute welcome mats and entry way stuff!",
+      "Look for fun kitchen gadgets!",
+      "Look for more puppy toys",
+      "Look for matching fuzzy slippers and pajamas for us!",
+      "Look for more books to read!",
+      "Look for things to put on your desk!"
+    ];
+
+    function showFunIdea() {
+      const randomIndex = Math.floor(Math.random() * funIdeas.length);
+      document.getElementById('output').textContent = funIdeas[randomIndex];
+    }
+
+    function showShoppingIdea() {
+      const randomIndex = Math.floor(Math.random() * shoppingIdeas.length);
+      document.getElementById('output').textContent = shoppingIdeas[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
